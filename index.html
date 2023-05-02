@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit with CSS</title>
+<style>
+        
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        user-select: none;
+    }
+
+    body{background-color: rgba(0, 96, 98, 0.872);}
+
+    .spinner-box {
+        width: 500px;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 96, 98, 0.872);
+        box-shadow: inset 1px 1px 8px rgb(255, 255, 70);
+        margin: 80px auto;
+        border-radius: 3px;
+    }
+
+    .leo {
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .blue-orbit {
+        width: 200px;
+        height: 200px;
+        border: 1.5px solid rgb(129, 129, 254);
+        animation: spin3D 3s linear .2s infinite;
+    }
+    
+    .green-orbit {
+        width: 150px;
+        height: 150px;
+        border: 1.5px solid rgb(129, 255, 129);
+        animation: spin3D 2s linear infinite;
+    }
+    
+    .red-orbit {
+        width: 120px;
+        height: 120px;
+        border: 1.5px solid rgb(255, 129, 129);
+        animation: spin3D 1s linear infinite;
+    }
+    
+    .white-orbit {
+        width: 80px;
+        height: 80px;
+        border: 1.8px solid rgb(172, 255, 255);
+        animation: spin3D 10s linear infinite;
+    }
+    
+    .w1{transform: rotate3D(1, 1, 1, 90deg);}
+        
+    .w2{transform: rotate3D(1, 2, .5, 90deg);}
+        
+    .w3{transform: rotate3D(.5, 1, 2, 90deg);}
+
+    @keyframes spin3D{
+        from{transform: rotate3d(.5,.5,.5, 360deg);}
+        to{transform: rotate3d(0deg);}
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="spinner-box">
+        <div class="blue-orbit leo"></div>
+        <div class="green-orbit leo"></div>
+        <div class="red-orbit leo"></div>
+        <div class="white-orbit w1 leo"></div>
+        <div class="white-orbit w2 leo"></div>
+        <div class="white-orbit w3 leo"></div>
+    </div>
+
+</body>
+</html>
